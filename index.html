@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfrevive</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel=”icon” href="./images/favicon.png" type=”image/x-icon”>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logoBox">
+                <div class="logoBoxLeft">
+                    <a href="./index.html"><img class="logo" src="./images/logo.png" alt="logo"></a>
+                    <a href="./index.html">
+                        <h1>Selfrevive</h1>
+                    </a>
+                </div>
+                <div class="logoBoxRight">
+                    <div class="links">
+                        <a href="https://www.facebook.com/savio.owl">
+                            <img src="./images/facebook.png" alt="facebook">
+                        </a>
+                        <a href="https://www.instagram.com/dr.savier/">
+                            <img src="./images/instagram.png" alt="instagram">
+                        </a>
+                        <a href="https://www.facebook.com/savio.owl">
+                            <img src="./images/facebook.png" alt="facebook">
+                        </a>
+                    </div>
+                    <div class="numbers">
+                        <a href="tel:+380739110069">Tel: +38(073)911-00-69 </a>
+                        <a href="tel:+380739110069">Tel: +38(073)911-00-69 </a>
+                        <a href="tel:+380739110069">Tel: +38(073)911-00-69 </a>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <div class="navigationLeft">
+
+                    <a href="#">О нас</a>
+                    <a href="#">Блог</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Магазин</a>
+                    <a href="#">Галерея</a>
+                    <a href="#">Отзывы</a>
+                    <a href="#">Клиенты</a>
+                </div>
+                <div class="navigationRight">
+                    <a href="#">Календарь</a>
+                </div>
+            </div>
+            <h4>Don't wait for anyone, do it!</h2>
+                <div class="course">
+                    <a href="#">Пройти курс</a>
+                </div>
+        </div>
+    </header>
+    <!-- Circle Text Effect -->
+    <section class="circle">
+        <h2 class="text">Stay-alive-</h2>
+    </section>
+    <script>
+        //now, split text in letters
+        const text = document.querySelector('.text');
+        text.innerHTML = text.textContent.replace(/\S/g, "<span>$&</span>")
+
+        const element = document.querySelectorAll('span');
+        for (let i = 0; i < element.length; i++) {
+            element[i].style.transform = "rotate(" + i * 33 + "deg)"
+        }
+
+        document.addEventListener("mousemove", function (e) {
+            text.style.left = e.pageX + 'px';
+            text.style.top = e.pageY + 'px';
+        })
+    </script>
+    <!-- CIRCLE EFFECT CLOSED -->
+
+    <script>$(function () {
+            $('.dropdown ul li').on('click', function () {
+                var label = $(this).parent().parent().children('label');
+                label.attr('data-value', $(this).attr('data-value'));
+                label.html($(this).html());
+
+                $(this).parent().children('.selected').removeClass('selected');
+                $(this).addClass('selected');
+            });
+        });</script>
+    <div class="main"></div>
+    <div class="footer"></div>
+</body>
+
+</html>
